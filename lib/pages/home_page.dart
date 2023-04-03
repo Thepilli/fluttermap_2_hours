@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttermap_2_hours/class/item_class.dart';
 import 'package:fluttermap_2_hours/core/constants.dart';
 import 'package:fluttermap_2_hours/widget/card_widget.dart';
 
@@ -15,30 +16,38 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const CardWidget(
-                title: 'rocket',
-                description: 'rocket description',
-                imagePath: 'images/rocket.png'),
+            CardWidget(
+              box: ItemClass(
+                title: "title",
+                imagePath: 'images/rocket.png',
+              ),
+            ),
             Row(
-              children: const [
+              children: [
                 Expanded(
                   child: CardWidget(
-                      title: 'rocket',
-                      description: 'rocket description',
-                      imagePath: 'images/travel.png'),
+                    box: ItemClass(
+                      title: "travel",
+                      imagePath: 'images/travel.png',
+                    ),
+                  ),
                 ),
                 Expanded(
                   child: CardWidget(
-                      title: 'rocket',
-                      description: 'rocket description',
-                      imagePath: 'images/space.png'),
+                    box: ItemClass(
+                      title: "space",
+                      imagePath: 'images/space.png',
+                    ),
+                  ),
                 ),
               ],
             ),
             CardWidget(
-                title: 'rocket',
-                description: 'rocket description',
-                imagePath: 'images/yeah.png'),
+              box: ItemClass(
+                title: "yeah",
+                imagePath: 'images/yeah.png',
+              ),
+            ),
           ],
         ),
       ),
